@@ -1916,7 +1916,7 @@ body {
 .cid-qAlYM3SSpz {
   padding-top: 90px;
   padding-bottom: 90px;
-  background-color: #f9f9f9;
+  background-color: #ffffff;
 }
 .cid-qAlYM3SSpz .mbr-text {
   color: #767676;
@@ -1931,10 +1931,24 @@ body {
   font-size: 96px;
   color: #149dcc;
 }
+.cid-qBA0dl0mgx {
+  padding-top: 30px;
+  padding-bottom: 120px;
+  background: #ffffff;
+  background: linear-gradient(0deg, #ffffff, #ffffff);
+}
+.cid-qBA0dl0mgx .video-block {
+  margin: auto;
+}
+@media (max-width: 768px) {
+  .cid-qBA0dl0mgx .video-block {
+    width: 100% !important;
+  }
+}
 .cid-qAm0PKebse {
   padding-top: 90px;
   padding-bottom: 135px;
-  background-color: #f9f9f9;
+  background-color: #ffffff;
 }
 .cid-qzk5xlxL0f {
   padding-top: 120px;
