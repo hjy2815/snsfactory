@@ -4,7 +4,7 @@
     "currentPage": "index.html",
     "versionFirst": "4.0.14",
     "uniqCompNum": 128,
-    "versionPublish": "4.5.1",
+    "versionPublish": "4.5.3",
     "theme": {
       "name": "mobirise4",
       "title": "Mobirise 4",
@@ -47,7 +47,7 @@
         "main": true,
         "title": "SNSFACTORY",
         "meta_descr": "",
-        "header_custom": "<head>\n    <title>SNSFACTORY</title>\n    <meta property=\"og:url\" content=\"http://snsfactory.co.kr/\">\n    <meta property=\"og:title\" content=\"SNSFACTORY\">  \n    <meta property=\"og:type\" content=\"website\">\n    <meta property=\"og:image\" content=\"https://i.imgur.com/C0VfwLA.png\">\n    <meta property=\"og:description\" content=\"SNS 좋아요·팔로워늘리기 자동시스템\">\n    <meta name=\"description\" content=\"SNS 좋아요·팔로워늘리기 자동시스템\">\n    <meta name=\"keywords\" content=\"SNS 좋아요·팔로워늘리기 자동시스템\">\n    ... \n</head>",
+        "header_custom": "<head>\n    <title>SNSFACTORY</title>\n    <meta property=\"og:url\" content=\"http://snsfactory.co.kr/\">\n    <meta property=\"og:title\" content=\"SNSFACTORY\">  \n    <meta property=\"og:type\" content=\"website\">\n    <meta property=\"og:image\" content=\"https://i.imgur.com/C0VfwLA.png\">\n    <meta property=\"og:description\" content=\"SNS 좋아요·팔로워늘리기 자동시스템\">\n    <meta name=\"description\" content=\"SNS 좋아요·팔로워늘리기 자동시스템\">\n    <meta name=\"keywords\" content=\"SNS 좋아요·팔로워늘리기 자동시스템\">\n<meta name=\"robots\" content=\"index,follow\">\n<meta name=\"naver-site-verification\" content=\"973784f3315d171ac35ee666f97de3431d49459c\"/>\n    ... \n</head>",
         "footer_custom": "",
         "html_before": ""
       },
