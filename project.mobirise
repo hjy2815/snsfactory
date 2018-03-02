@@ -3,7 +3,7 @@
     "name": "Snsfactory",
     "currentPage": "index.html",
     "versionFirst": "4.0.14",
-    "uniqCompNum": 130,
+    "uniqCompNum": 131,
     "versionPublish": "4.5.3",
     "theme": {
       "name": "mobirise4",
@@ -346,6 +346,135 @@
               }
             ]
           }
+        },
+        {
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            ".mbr-section-subtitle": {
+              "color": "#767676"
+            },
+            ".mbr-text": {
+              "color": "#767676"
+            },
+            ".card": {
+              "position": "relative",
+              "justify-content": "center"
+            },
+            ".media-container-row": {
+              "align-items": "flex-start"
+            },
+            ".card-wrapper": {
+              "box-shadow": "0px 0px 0px 0px rgba(0, 0, 0, 0)",
+              "transition": "box-shadow 0.3s",
+              ".card-img": {
+                "display": "block",
+                "position": "relative",
+                "overflow": "hidden",
+                "border-bottom-right-radius": "0",
+                "border-bottom-left-radius": "0",
+                ".mbr-overlay": {
+                  "background": "@cardOverlayColor1",
+                  "& when (@cardGradient)": {
+                    "background": "linear-gradient(135deg, @cardOverlayColor1, @cardOverlayColor2)"
+                  },
+                  "display": "block",
+                  "opacity": "@cardOverlayOpacity",
+                  "transition": "all .3s",
+                  "border-bottom-left-radius": "50%"
+                },
+                ".mbr-section-btn": {
+                  "text-align": "center",
+                  "position": "absolute",
+                  "top": "50%",
+                  "transform": "translateY(-50%)",
+                  "width": "100%",
+                  "transition": "opacity .3s",
+                  "margin": "auto"
+                }
+              },
+              ".card-box": {
+                "background-color": "@bgCard",
+                "padding": "0 2rem 2rem 2rem",
+                "border-bottom-left-radius": "0",
+                "border-bottom-right-radius": "0",
+                "h4": {
+                  "font-weight": "500",
+                  "margin-bottom": "0",
+                  "padding-top": "2rem"
+                },
+                "p": {
+                  "margin-bottom": "0",
+                  "padding-top": "1.5rem",
+                  "& when not (@showCardTitle)": {
+                    "padding-top": "2rem"
+                  }
+                }
+              },
+              "&:hover": {
+                "box-shadow": "0px 0px 30px 0px rgba(0, 0, 0, 0.05)",
+                "transition": "box-shadow 0.3s"
+              }
+            },
+            ".popup-btn": {
+              ".mbr-overlay": {
+                "opacity": "0",
+                "height": "0",
+                "bottom": "0",
+                "top": "auto",
+                "border-bottom-left-radius": "0 !important"
+              },
+              ".mbr-section-btn": {
+                "opacity": "0"
+              },
+              "&:hover": {
+                ".mbr-overlay": {
+                  "opacity": "@cardOverlayOpacity",
+                  "height": "100%"
+                },
+                ".mbr-section-btn": {
+                  "opacity": "1"
+                }
+              }
+            },
+            ".underline": {
+              "padding-top": ".5rem",
+              "padding-bottom": ".5rem",
+              ".line": {
+                "width": "5rem",
+                "height": "3px",
+                "background": "linear-gradient(90deg, @primaryColor, @secondaryColor)",
+                "display": "inline-block"
+              }
+            },
+            "@media (min-width: 768px)": {
+              ".mbr-section-title,.underline,.mbr-section-subtitle": {
+                "padding-left": "3rem",
+                "padding-right": "3rem"
+              }
+            },
+            ".mbr-section-title,.underline": {
+              "color": "#ff3366"
+            },
+            ".card-title": {
+              "color": "#ff3366"
+            }
+          },
+          "_name": "features5",
+          "_customHTML": "<section class=\"features5 popup-btn-cards\" group=\"Animated Features\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-parallax-background': bg.parallax}\" plugins=\"mbr-popup-btns\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"9\" step=\"1\" value=\"6\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"9\" step=\"1\" value=\"6\">\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Show Underline\" name=\"showUnderline\" checked condition=\"showTitle\">\n        <input type=\"checkbox\" title=\"Show Subtitle\" name=\"showSubtitle\" checked>\n        <input type=\"checkbox\" title=\"Show Card Title\" name=\"showCardTitle\" checked>\n        <input type=\"checkbox\" title=\"Show Text\" name=\"showText\" checked>\n        <input type=\"color\" title=\"Card Background\" name=\"bgCard\" value=\"#ffffff\">\n        <input type=\"color\" title=\"Card Overlay Color\" name=\"cardOverlayColor1\" value=\"#a38dfd\">\n        <input type=\"checkbox\" title=\"Card Overlay Gradient\" name=\"cardGradient\" checked>\n        <input type=\"color\" title=\"Card Overlay Color 2\" name=\"cardOverlayColor2\" value=\"#ffa0a4\" condition=\"cardGradient\">\n        <input type=\"range\" inline title=\"Card Overlay Opacity\" name=\"cardOverlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.8\">\n        <select title=\"Cards\" name=\"cardsAmount\">\n            <option value=\"1\">1</option>\n            <option value=\"2\">2</option>\n            <option value=\"3\">3</option>\n            <option value=\"4\">4</option>\n            <option value=\"5\">5</option>\n            <option value=\"6\">6</option>\n            <option value=\"7\">7</option>\n            <option value=\"8\" selected>8</option>\n        </select>\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Background Image\" value=\"@PROJECT_PATH@/assets/images/background5.jpg\" parallax>\n            <input type=\"color\" title=\"Background Color\" value=\"#ffffff\" selected>\n            <input type=\"video\" title=\"Background Video\" value=\"https://www.youtube.com/watch?v=kI1YE_qenSU\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\">\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#efefef\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.8\" condition=\"overlay && bg.type !== 'color'\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n    <div class=\"container-fluid\">\n        <h2 class=\"mbr-section-title align-center mbr-fonts-style\" mbr-theme-style=\"display-2\" mbr-if=\"showTitle\" data-app-selector=\".mbr-section-title,.underline\"><b>SNSFactory </b>BEST PRODUCTS\n        </h2>\n        <div class=\"underline align-center\" mbr-if=\"showUnderline && showTitle\">\n            <div class=\"line\"></div>\n        </div>\n        <h3 class=\"mbr-section-subtitle display-5 align-center mbr-fonts-style mbr-light pt-3 pb-5\" mbr-theme-style=\"display-5\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\"><b>SNSFactory </b>회원님들이 가장 많이 이용하는 상품들입니다.<br>더 많은 상품들이 고객님을 기다리고있습니다.</h3>\n        <div class=\"row justify-content-center pt-5 align-items-start\" mbr-cards=\"bootstrap\" mbr-class=\"{'pt-5':!showSubtitle}\">\n            <div class=\"card p-3 col-12 col-md-6 col-lg-4 col-xl-3\">\n                <div class=\"card-wrapper \">\n                    <div class=\"card-img\">\n                        <div class=\"mbr-overlay\"></div>\n                        <div mbr-buttons mbr-theme-style=\"display-4\" class=\"mbr-section-btn text-center\" data-toolbar=\"-mbrBtnMove,-mbrBtnAdd\"><a href=\"http://app.snsfactory.co.kr/\" class=\"btn btn-white\" target=\"_blank\">\n                                구매하기</a></div>\n                        <img src=\"@PROJECT_PATH@/assets/images/instagram-1500x1000.jpg\" alt=\"Mobirise\" title>\n                    </div>\n                    <div class=\"card-box\" mbr-if=\"showText || showCardTitle\">\n                        <h4 class=\"card-title mbr-fonts-style align-center\" mbr-theme-style=\"display-5\" mbr-if=\"showCardTitle\" data-app-selector=\".card-title\">인스타그램 팔로워</h4>\n                        <p class=\"mbr-text mbr-fonts-style align-left\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text\">\n                            회원님의 인스타그램 계정에 <br>팔로워를 늘리는 서비스 입니다. \n                        </p>\n                    </div>\n                </div>\n            </div>\n            <div class=\"card p-3 col-12 col-md-6 col-lg-4 col-xl-3\" mbr-if=\"cardsAmount > 1\">\n                <div class=\"card-wrapper\">\n                    <div class=\"card-img\">\n                        <div class=\"mbr-overlay\"></div>\n                        <div mbr-buttons mbr-theme-style=\"display-4\" class=\"mbr-section-btn text-center\" data-toolbar=\"-mbrBtnMove,-mbrBtnAdd\"><a href=\"http://app.snsfactory.co.kr/\" class=\"btn btn-white\" target=\"_blank\">\n                                구매하기</a></div>\n                        <img src=\"@PROJECT_PATH@/assets/images/instagram-1500x1000.jpg\" alt=\"Mobirise\" title>\n                    </div>\n                    <div class=\"card-box\" mbr-if=\"showText || showCardTitle\">\n                        <h4 class=\"card-title mbr-fonts-style align-center\" mbr-theme-style=\"display-5\" mbr-if=\"showCardTitle\" data-app-selector=\".card-title\">인스타그램 토탈 계정 서비스(30일)</h4>\n                        <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text\">회원님의 인스타그램 계정을 저희 서버에 등록하여 <br>원하시는 타겟층에서 실제 활동하는 사용자에게 <br>좋아요,댓글,선팔,언팔 활동을 24시간 진행하여 <br>실제 한국인 팔로워를 증가시키는 서비스입니다.</p>\n                    </div>\n                </div>\n            </div>\n\n            <div class=\"card p-3 col-12 col-md-6 col-lg-4 col-xl-3\" mbr-if=\"cardsAmount > 2\">\n                <div class=\"card-wrapper\">\n                    <div class=\"card-img\">\n                        <div class=\"mbr-overlay\"></div>\n                        <div mbr-buttons mbr-theme-style=\"display-4\" class=\"mbr-section-btn text-center\" data-toolbar=\"-mbrBtnMove,-mbrBtnAdd\"><a href=\"http://app.snsfactory.co.kr/\" class=\"btn btn-white\" target=\"_blank\">\n                               구매하기</a></div>\n                        <img src=\"@PROJECT_PATH@/assets/images/instagram-1500x1000.jpg\" alt=\"Mobirise\" title>\n                    </div>\n                    <div class=\"card-box\" mbr-if=\"showText || showCardTitle\">\n                        <h4 class=\"card-title mbr-fonts-style align-center\" mbr-theme-style=\"display-5\" mbr-if=\"showCardTitle\" data-app-selector=\".card-title\">인스타그램 무제한 좋아요(30일)</h4>\n                        <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text\">\n                            회원님의 인스타그램 계정에 30일동안 자동으로 <br>사진 및 동영상에 좋아요를 늘리는 서비스 입니다. \n                        </p>\n                    </div>\n                </div>\n            </div>\n            <div class=\"card p-3 col-12 col-md-6 col-lg-4 col-xl-3\" mbr-if=\"cardsAmount > 3\">\n                <div class=\"card-wrapper\">\n                    <div class=\"card-img\">\n                        <div class=\"mbr-overlay\"></div>\n                        <div mbr-buttons mbr-theme-style=\"display-4\" class=\"mbr-section-btn text-center\" data-toolbar=\"-mbrBtnMove,-mbrBtnAdd\"><a href=\"http://app.snsfactory.co.kr/\" class=\"btn btn-white\" target=\"_blank\">\n                                구매하기</a></div>\n                        <img src=\"@PROJECT_PATH@/assets/images/instagram-1500x1000.jpg\" alt=\"Mobirise\" title>\n                    </div>\n                    <div class=\"card-box\" mbr-if=\"showText || showCardTitle\">\n                        <h4 class=\"card-title mbr-fonts-style align-center\" mbr-theme-style=\"display-5\" mbr-if=\"showCardTitle\" data-app-selector=\".card-title\">인스타그램 게시물 좋아요\n</h4>\n                        <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text\">\n                            회원님의 인스타그램 계정에 이미 게시되어있는 <br>사진 및 동영상에 좋아요를 늘리는 서비스 입니다. \n                        </p>\n                    </div>\n                </div>\n            </div>\n            <div class=\"card p-3 col-12 col-md-6 col-lg-4 col-xl-3\" mbr-if=\"cardsAmount > 4\">\n                <div class=\"card-wrapper\">\n                    <div class=\"card-img\">\n                        <div class=\"mbr-overlay\"></div>\n                        <div mbr-buttons mbr-theme-style=\"display-4\" class=\"mbr-section-btn text-center\" data-toolbar=\"-mbrBtnMove,-mbrBtnAdd\"><a href=\"http://app.snsfactory.co.kr/\" class=\"btn btn-white\" target=\"_blank\">\n                                구매하기</a></div>\n                        <img src=\"@PROJECT_PATH@/assets/images/face-1500x1000.jpg\" alt=\"Mobirise\" title>\n                    </div>\n                    <div class=\"card-box\" mbr-if=\"showText || showCardTitle\">\n                        <h4 class=\"card-title mbr-fonts-style align-center\" mbr-theme-style=\"display-5\" mbr-if=\"showCardTitle\" data-app-selector=\".card-title\">페이스북 페이지 좋아요\n</h4>\n                        <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text\">\n                            회원님의 페이스북 페이지에 좋아요 (팬) 수를 <br>늘리는 서비스 입니다. \n                        </p>\n                    </div>\n                </div>\n            </div>\n            <div class=\"card p-3 col-12 col-md-6 col-lg-4 col-xl-3\" mbr-if=\"cardsAmount > 5\">\n                <div class=\"card-wrapper\">\n                    <div class=\"card-img\">\n                        <div class=\"mbr-overlay\"></div>\n                        <div mbr-buttons mbr-theme-style=\"display-4\" class=\"mbr-section-btn text-center\" data-toolbar=\"-mbrBtnMove,-mbrBtnAdd\"><a href=\"http://app.snsfactory.co.kr/\" class=\"btn btn-white\" target=\"_blank\">\n                                구매하기</a></div>\n                        <img src=\"@PROJECT_PATH@/assets/images/face-1500x1000.jpg\" alt=\"Mobirise\" title>\n                    </div>\n                    <div class=\"card-box\" mbr-if=\"showText || showCardTitle\">\n                        <h4 class=\"card-title mbr-fonts-style align-center\" mbr-theme-style=\"display-5\" mbr-if=\"showCardTitle\" data-app-selector=\".card-title\">페이스북 게시물 좋아요\n</h4>\n                        <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text\">\n                            페이스북 페이지 또는 개인계정에 포스팅된 <br>게시물에 좋아요를 늘리는 서비스 입니다. \n                        </p>\n                    </div>\n                </div>\n            </div>\n            <div class=\"card p-3 col-12 col-md-6 col-lg-4 col-xl-3\" mbr-if=\"cardsAmount > 6\">\n                <div class=\"card-wrapper\">\n                    <div class=\"card-img\">\n                        <div class=\"mbr-overlay\"></div>\n                        <div mbr-buttons mbr-theme-style=\"display-4\" class=\"mbr-section-btn text-center\" data-toolbar=\"-mbrBtnMove,-mbrBtnAdd\"><a href=\"http://app.snsfactory.co.kr/\" class=\"btn btn-white\" target=\"_blank\">\n                                구매하기</a></div>\n                        <img src=\"@PROJECT_PATH@/assets/images/face-1500x1000.jpg\" alt=\"Mobirise\" title>\n                    </div>\n                    <div class=\"card-box\" mbr-if=\"showText || showCardTitle\">\n                        <h4 class=\"card-title mbr-fonts-style align-center\" mbr-theme-style=\"display-5\" mbr-if=\"showCardTitle\" data-app-selector=\".card-title\">페이스북 게시물 공유\n</h4>\n                        <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text\">\n                            페이스북 페이지 또는 개인계정에 포스팅된 <br>게시물에 공유를 늘리는 서비스 입니다. \n                        </p>\n                    </div>\n                </div>\n            </div>\n            <div class=\"card p-3 col-12 col-md-6 col-lg-4 col-xl-3\" mbr-if=\"cardsAmount > 7\">\n                <div class=\"card-wrapper\">\n                    <div class=\"card-img\">\n                        <div class=\"mbr-overlay\"></div>\n                        <div mbr-buttons mbr-theme-style=\"display-4\" class=\"mbr-section-btn text-center\" data-toolbar=\"-mbrBtnMove,-mbrBtnAdd\"><a href=\"http://app.snsfactory.co.kr/\" class=\"btn btn-white\" target=\"_blank\">\n                                구매하기</a></div>\n                        <img src=\"@PROJECT_PATH@/assets/images/youtube-1500x1000.jpg\" alt=\"Mobirise\" title>\n                    </div>\n                    <div class=\"card-box\" mbr-if=\"showText || showCardTitle\">\n                        <h4 class=\"card-title mbr-fonts-style align-center\" mbr-theme-style=\"display-5\" mbr-if=\"showCardTitle\" data-app-selector=\".card-title\">유튜브 조회수 늘리기\n</h4>\n                        <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text\">\n                            유튜브 동영상에 조회수를 늘리는 서비스 입니다.\n                        </p>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_anchor": "features5-3m",
+          "_isUserblock": true,
+          "_cid": "qL7m5lQFKq",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
         },
         {
           "_styles": {
